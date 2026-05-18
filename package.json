@@ -1,0 +1,54 @@
+{
+  "name": "@x1ee7/sm2-spaced-repetition",
+  "version": "0.1.0",
+  "description": "Zero-dependency SM-2 spaced-repetition algorithm + quiz-answer quality mapping. Extracted from examace.ca. Bring your own storage.",
+  "keywords": [
+    "sm-2",
+    "sm2",
+    "spaced-repetition",
+    "srs",
+    "supermemo",
+    "flashcards",
+    "leitner",
+    "learning"
+  ],
+  "license": "MIT",
+  "author": "examace.ca",
+  "homepage": "https://github.com/x1ee7/sm2-spaced-repetition#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x1ee7/sm2-spaced-repetition.git"
+  },
+  "bugs": {
+    "url": "https://github.com/x1ee7/sm2-spaced-repetition/issues"
+  },
+  "funding": "https://github.com/sponsors/x1ee7",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
